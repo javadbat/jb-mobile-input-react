@@ -16,7 +16,7 @@
     "react",
     "react component"
   ],
-  "version": "1.1.0",
+  "version": "1.1.2",
   "bugs": "https://github.com/javadbat/jb-mobile-input-react/issues",
   "license": "MIT",
   "files": [
@@ -26,7 +26,7 @@
     "dist/"
   ],
   "main": "index.js",
-  "types": "./dist/dist/jb-mobile-input/lib/JBMobileInput.d.ts",
+  "types": "./dist/jb-mobile-input/lib/JBMobileInput.d.ts",
   "repository": {
 		"type": "git",
 		"url": "git@github.com:javadbat/jb-mobile-input-react.git"
