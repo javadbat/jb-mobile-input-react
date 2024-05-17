@@ -4,10 +4,6 @@
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.JBMobileInput = {}, global.React));
 })(this, (function (exports, React) { 'use strict';
 
-    function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-    var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
-
     function useEvent(dom, event, handler) {
       var passive = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
       React.useEffect(function () {
@@ -25,7 +21,7 @@
     }
 
     // eslint-disable-next-line react/display-name
-    const JBMobileInput = React__default["default"].forwardRef((props, ref) => {
+    const JBMobileInput = React.forwardRef((props, ref) => {
         const element = React.useRef(null);
         const [refChangeCount, refChangeCountSetter] = React.useState(0);
         React.useImperativeHandle(ref, () => (element ? element.current : {}), [element]);
@@ -110,13 +106,11 @@
         useEvent(element.current, 'enter', onEnter);
         useEvent(element.current, 'input', onInput);
         useEvent(element.current, 'beforeinput', onBeforeInput);
-        return (React__default["default"].createElement("jb-mobile-input", { placeholder: props.placeholder, ref: element, class: props.className, label: props.label, message: props.message }, props.children));
+        return (React.createElement("jb-mobile-input", { placeholder: props.placeholder, ref: element, class: props.className, label: props.label, message: props.message }, props.children));
     });
     JBMobileInput.displayName = "JBMobileInput";
 
     exports.JBMobileInput = JBMobileInput;
-
-    Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
 //# sourceMappingURL=JBMobileInput.umd.js.map
