@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useImperativeHandle, useState, useCallback } from 'react';
 // import PropTypes from 'prop-types';
 import 'jb-mobile-input';
-import { useEvent } from '../../custom-hooks/UseEvent';
+import { useEvent } from '../../../common/hooks/use-event';
 // import { JBInputValidationItem } from 'jb-input/dist/Types';
 import {JBInputEventType} from 'jb-input-react';
 // eslint-disable-next-line no-duplicate-imports

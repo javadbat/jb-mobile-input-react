@@ -3,20 +3,19 @@
 var React = require('react');
 require('jb-mobile-input');
 
-function useEvent(dom, event, handler) {
-  var passive = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
-  React.useEffect(function () {
-    if (dom) {
-      // initiate the event handler
-      dom.addEventListener(event, handler, passive);
-    }
-    // this will clean up the event every time the component is re-rendered
-    return function cleanup() {
-      if (dom) {
-        dom.removeEventListener(event, handler, passive);
-      }
-    };
-  });
+function useEvent(dom, event, handler, passive = false) {
+    React.useEffect(() => {
+        if (dom) {
+            // initiate the event handler
+            dom.addEventListener(event, handler, passive);
+        }
+        // this will clean up the event every time the component is re-rendered
+        return function cleanup() {
+            if (dom) {
+                dom.removeEventListener(event, handler, passive);
+            }
+        };
+    });
 }
 
 // eslint-disable-next-line react/display-name
@@ -74,7 +73,7 @@ const JBMobileInput = React.forwardRef((props, ref) => {
             value = '';
         }
         if (element && element.current && element.current) {
-            element.current.value = (value === null || value === void 0 ? void 0 : value.toString()) || "";
+            element.current.value = value?.toString() || "";
         }
     }, [props.value]);
     // useEffect(() => {
@@ -83,18 +82,16 @@ const JBMobileInput = React.forwardRef((props, ref) => {
     //     }
     // }, [props.validationList]);
     React.useEffect(() => {
-        var _a;
         if (typeof props.disabled == "boolean") {
-            (_a = element === null || element === void 0 ? void 0 : element.current) === null || _a === void 0 ? void 0 : _a.setAttribute('disabled', `${props.disabled}`);
+            element?.current?.setAttribute('disabled', `${props.disabled}`);
         }
     }, [props.disabled]);
     React.useEffect(() => {
-        var _a, _b;
         if (props.inputmode) {
-            (_a = element.current) === null || _a === void 0 ? void 0 : _a.setAttribute('inputmode', props.inputmode);
+            element.current?.setAttribute('inputmode', props.inputmode);
         }
         else {
-            (_b = element.current) === null || _b === void 0 ? void 0 : _b.removeAttribute('inputmode');
+            element.current?.removeAttribute('inputmode');
         }
     }, [props.inputmode]);
     useEvent(element.current, 'change', onChange);
