@@ -13,10 +13,11 @@
     "JBMobileInput",
     "mobile input component",
     "mobile",
+    "موبایل",
     "react",
     "react component"
   ],
-  "version": "2.0.2",
+  "version": "2.0.8",
   "bugs": "https://github.com/javadbat/jb-mobile-input-react/issues",
   "license": "MIT",
   "files": [
@@ -26,13 +27,13 @@
     "dist/"
   ],
   "main": "index.js",
-  "types": "./dist/jb-mobile-input/lib/JBMobileInput.d.ts",
+  "types": "./dist/react-component/jb-mobile-input/lib/JBMobileInput.d.ts",
   "repository": {
 		"type": "git",
 		"url": "git@github.com:javadbat/jb-mobile-input-react.git"
   },
   "dependencies": {
-    "jb-mobile-input": ">=2.0.0",
-    "jb-input-react": ">=3.1.0"
+    "jb-mobile-input": ">=2.0.3",
+    "jb-input-react": ">=3.2.0"
   }
 }

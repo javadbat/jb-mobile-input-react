@@ -1,15 +1,10 @@
 import React, { useRef, useEffect, useImperativeHandle, useState } from 'react';
 import 'jb-mobile-input';
-import {Props as JBInputProps, useJBInputAttribute, useJBInputEvents} from 'jb-input-react';
+import {type Props as JBInputProps, useJBInputAttribute, useJBInputEvents} from 'jb-input-react';
 // eslint-disable-next-line no-duplicate-imports
-import { JBMobileInputWebComponent } from 'jb-mobile-input';
+import { type JBMobileInputWebComponent } from 'jb-mobile-input';
 interface JBMobileInputType extends React.DetailedHTMLProps<React.HTMLAttributes<JBMobileInputWebComponent>, JBMobileInputWebComponent> {
   class?:string,
-  label?: string,
-  name?:string,
-  message?:string,
-  placeholder?:string,
-  // ref:React.RefObject<JBDateInputWebComponent>,
 }
 declare global {
     // eslint-disable-next-line @typescript-eslint/no-namespace
