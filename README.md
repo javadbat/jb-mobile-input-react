@@ -1,3 +1,6 @@
+> [!WARNING]  
+> this package is deprecated and moved to [jb-mobile-input/react](https://github.com/javadbat/jb-mobile-input/tree/main/react)
+
 # jb-mobile-input-react
 superset component on [jb-input-react](https://github.com/javadbat/jb-input-react) , just for mobile number input with extra filter and ready to use validator
 
